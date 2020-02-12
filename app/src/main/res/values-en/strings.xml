@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">work 3.3.2</string>
+    <string-array name="language">
+        <item>Russian</item>
+        <item>English</item>
+    </string-array>
+    <string name="main_text">AUTOQUEST (City Orienteering) - a kind of sport that includes elements of an intellectual game and became widespread at the beginning of the XXI century.</string>
+    <string name="button_ok">Ok</string>
+</resources>
