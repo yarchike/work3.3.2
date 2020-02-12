@@ -6,4 +6,10 @@
     </string-array>
     <string name="main_text">АВТОКВЕСТ (Городское ориентирование) — своеобразный вид спорта, включающий элементы интеллектуальной игры и получивший широкое распространение в начале XXI века. </string>
     <string name="button_ok">Ок</string>
+    <string name="choice_ru">Вы уже выбрали русский</string>
+    <string name="choice_en">Вы уже выбрали английский</string>
+
+
+    choice
+
 </resources>

@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -33,22 +34,30 @@ public class MainActivity extends AppCompatActivity {
         buttonOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String selected= (String) spinner.getSelectedItem();
-                switch (selected){
-                    case ("Английский") :
+                String selected = (String) spinner.getSelectedItem();
+                switch (selected) {
+                    case ("Английский"):
                         createLocal("en");
-                    case("Russian"):
+                        break;
+                    case ("Russian"):
                         createLocal("ru");
-
+                        break;
+                    case ("Русский"):
+                        Toast.makeText(MainActivity.this, getText(R.string.choice_ru).toString(), Toast.LENGTH_LONG).show();
+                        break;
+                    case ("English"):
+                        Toast.makeText(MainActivity.this, getText(R.string.choice_en).toString(), Toast.LENGTH_LONG).show();
+                        break;
                 }
             }
         });
 
     }
-    void createLocal(String local){
+
+    void createLocal(String local) {
         Configuration config = new Configuration();
         Locale locale = new Locale(local);
-        config.setLocale(locale);
+        config.locale = locale;
         getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
         recreate();
     }
