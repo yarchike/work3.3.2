@@ -56,8 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     void createLocal(String local) {
         Configuration config = new Configuration();
-        Locale locale = new Locale(local);
-        config.locale = locale;
+        config.locale = new Locale(local);
         getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
         recreate();
     }
